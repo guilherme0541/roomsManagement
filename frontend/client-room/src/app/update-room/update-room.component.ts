@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UpdateRoomComponent implements OnInit {
 
   id: number =0;
-  room: Room | undefined;
+  room!: Room;
   submitted = false;
 
   constructor(private roomService: RoomService,
@@ -19,7 +19,7 @@ export class UpdateRoomComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(){
-    this.room = new Room;
+    this.room = new Room();
     this.id= this.route.snapshot.params['id'];
     this.roomService.getRoom(this.id)
       .subscribe(

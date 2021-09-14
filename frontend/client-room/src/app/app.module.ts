@@ -10,6 +10,12 @@ import { RoomListComponent } from './room-list/room-list.component';
 import { UpdateRoomComponent } from './update-room/update-room.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+  ],
   declarations: [
     AppComponent,
     CreateRoomComponent,
@@ -17,12 +23,7 @@ import { UpdateRoomComponent } from './update-room/update-room.component';
     RoomListComponent,
     UpdateRoomComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
